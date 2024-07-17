@@ -43,4 +43,4 @@ alert(result)
 // 	res.innerText = mincost(inputEle)
 // })
 
-// module.exports=mincost;
+module.exports=mincost;
