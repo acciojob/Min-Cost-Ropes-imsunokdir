@@ -29,10 +29,10 @@ function mincost(arr)
 	}
 	return totalSum
 }
-// inpEle = prompt("Enter elements seperated by space");
-// inputEle = inpEle.split(" ").map(Number);
-// result = mincost(inputEle)
-// alert(result)  
+inpEle = prompt("Enter elements seperated by space");
+inputEle = inpEle.split(" ").map(Number);
+result = mincost(inputEle)
+alert(result)  
 
 
 // document.getElementById("min-cost").addEventListener("submit", function(e){
