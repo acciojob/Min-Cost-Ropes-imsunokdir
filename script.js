@@ -4,7 +4,7 @@ function mincost(arr)
 // return the min cost
   let n = arr.length;
 	if(n<2){
-		return -1;
+		return "array length should be greater than 1";
 	}
 	let totalSum = 0;
 	for(let i=0;i<n-1;i++){
@@ -20,7 +20,7 @@ function mincost(arr)
 			}
 		}
 		if(secondSmallest == Infinity){
-			return -1;
+			return "No second smallest found";
 		}
 		sum = firstSmallest+secondSmallest;
 		totalSum+=sum;
@@ -29,13 +29,18 @@ function mincost(arr)
 	}
 	return totalSum
 }
+inpEle = prompt("Enter elements seperated by space");
+inputEle = inpEle.split(" ").map(Number);
+result = mincost(inputEle)
+alert(result)  
 
-document.getElementById("min-cost").addEventListener("submit", function(e){
-	e.preventDefault();
-	inpEle = document.getElementById("inputElements").value;
-	inputEle = inpEle.split(" ").map(Number);
-	res = document.getElementById("result");
-	res.innerText = mincost(inputEle)
-})
+
+// document.getElementById("min-cost").addEventListener("submit", function(e){
+// 	e.preventDefault();
+// 	inpEle = document.getElementById("inputElements").value;
+// 	inputEle = inpEle.split(" ").map(Number);
+// 	res = document.getElementById("result");
+// 	res.innerText = mincost(inputEle)
+// })
 
 // module.exports=mincost;
